@@ -21,7 +21,7 @@ def convert_to_glif(primitive):
 		return pcb_polygon(primitive)
 		
 	else:
-		print "Unsupported gerber primitive %s " % str(type(pcb_primitive))
+		print ("Unsupported gerber primitive %s " % str(type(pcb_primitive)))
 	
 
 def pcb_line(p):
@@ -39,7 +39,7 @@ def pcb_line(p):
 			new.design_rules.thickness=SCALE*p.aperture.diameter
 		except:
 			new.design_rules.thickness=0.1 #0.1mm default
-			print "Error unsupported line shape %s " % str(type(p.aperture))
+			print ("Error unsupported line shape %s " % str(type(p.aperture)))
 			
 	
 	new.start=glif.coordinate(p.start[0]*CORD_SCALE, p.start[1]*CORD_SCALE)
@@ -82,7 +82,7 @@ for i in example.primitives:
 	if primitive:
 		primitives+=[primitive]
 		
-print primitives
+print(primitives)
 
 g=gerber_writer.gerber_writer("pcb_tools_export.gbr")
 

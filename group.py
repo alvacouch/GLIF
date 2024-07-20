@@ -105,15 +105,15 @@ class group:
 def test_coordinate():		
 	a=coordinate(1, 2)
 	b=coordinate(3, 4)
-	print a
-	print b
-	print a+b
-	print a-b
+	print (a)
+	print (b)
+	print (a+b)
+	print (a-b)
 	
 def test_groups():		
 	a=group(1, 2, 0, [1, 2, 3])
 	b=group(3, 4, 0, [4, 5, 6])
-	print a
-	print b
+	print (a)
+	print (b)
 
-	print a[2]
+	print (a[2])
